@@ -54,8 +54,13 @@ class Piggy(PiggyParent):
     '''
 
     def dance(self):
-        print("I don't know how to dance. \nPlease give my programmer a zero.")
-
+        """START DANCING"""
+        #HIGHER - ORDER
+        for x in ranger(3):
+        self.spin
+        self.wiggle
+        self.shuffle
+        self.crazy
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
         for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 3):
@@ -71,9 +76,37 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
 
+    def spin(self):
+    """spin around"""
+    # move left wheel
+    pass
+    def wiggle(self):
+    """move left to right"""
+    # move left wheel
 
 
+    # move right wheel
+    pass
+    def shuffle(self):
+    """moves the robot left and right forward then backwards"""
+    # move left wheel forward
 
+    # move right wheel forward
+
+    # move left wheel backwards
+
+    #move righ wheel backwards
+    pass
+    def crazy(self):
+    """spins and moves servo"""
+    #move servo 1000
+
+    #move left wheel forward 
+
+    #move left wheel backwards
+
+    #move servo 2000
+    pass
 ###########
 ## MAIN APP
 if __name__ == "__main__":  # only run this loop if this is the main file
