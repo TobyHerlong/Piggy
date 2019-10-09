@@ -57,10 +57,11 @@ class Piggy(PiggyParent):
         """START DANCING"""
         #HIGHER - ORDER
         """for x in range(3):
-            self.spin
+            self.shuffle
             self.wiggle
             self.crazy"""
-        self.shuffle()
+            self.spin
+            
     
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
@@ -79,7 +80,8 @@ class Piggy(PiggyParent):
 
     def spin(self):
         """spin around"""
-        # move left wheel
+        turn_to_deg(360)
+        self.stop
         pass
     def wiggle(self):
         """move left to right"""
@@ -91,20 +93,7 @@ class Piggy(PiggyParent):
     def shuffle(self):
         """moves the robot left and right forward then backwards"""
         # move left wheel forward
-        self.right(primary=90, counter=0)
-        self.stop(1)
-        # move right wheel forward
-        
-        self.right(primary=90, counter=0)
-        self.stop(1)
-        # move left wheel backwards
-       
-        self.left(primary=-90, counter=0)
-        self.stop(1)
-        #move righ wheel backwards
-
-        self.right(primary=-90, counter=0)
-        self.stop(1)
+        pass      
     def crazy(self):
         """spins and moves servo"""
         #move servo 1000
