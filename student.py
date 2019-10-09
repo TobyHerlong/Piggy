@@ -60,7 +60,7 @@ class Piggy(PiggyParent):
         self.spin
         self.wiggle
         self.crazy"""
-        self.shuffle
+        self.shuffle()
     
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
@@ -78,18 +78,18 @@ class Piggy(PiggyParent):
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
 
     def spin(self):
-    """spin around"""
-    # move left wheel
-    pass
+        """spin around"""
+        # move left wheel
+        pass
     def wiggle(self):
-    """move left to right"""
-    # move left wheel
+        """move left to right"""
+        # move left wheel
 
 
-    # move right wheel
-    pass
+        # move right wheel
+        pass
     def shuffle(self):
-    """moves the robot left and right forward then backwards"""
+        """moves the robot left and right forward then backwards"""
         # move left wheel forward
         self.right(primary=90, counter=0)
         self.stop(1)
@@ -106,17 +106,17 @@ class Piggy(PiggyParent):
         self.right(primary=-90, counter=0)
         self.stop(1)
     def crazy(self):
-    """spins and moves servo"""
-    #move servo 1000
+        """spins and moves servo"""
+        #move servo 1000
 
-    #move left wheel forward 
+        #move left wheel forward 
 
-    #move left wheel backwards
+        #move left wheel backwards
 
-    #move servo 2000
-    pass
-###########
-## MAIN APP
+        #move servo 2000
+        pass
+    ###########
+    ## MAIN APP
 if __name__ == "__main__":  # only run this loop if this is the main file
 
     p = Piggy()
