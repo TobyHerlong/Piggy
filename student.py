@@ -56,7 +56,7 @@ class Piggy(PiggyParent):
     def dance(self):
         """START DANCING"""
         #HIGHER - ORDER
-        """for x in ranger(3):
+        """for x in range(3):
             self.spin
             self.wiggle
             self.crazy"""
