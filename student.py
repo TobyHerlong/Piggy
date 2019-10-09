@@ -61,6 +61,7 @@ class Piggy(PiggyParent):
         self.wiggle
         self.shuffle
         self.crazy
+        pass
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
         for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 3):
@@ -89,14 +90,21 @@ class Piggy(PiggyParent):
     pass
     def shuffle(self):
     """moves the robot left and right forward then backwards"""
-    # move left wheel forward
+        # move left wheel forward
+        self.right(primary=90, counter=0)
+        self.stop(1)
+        # move right wheel forward
+        
+        self.right(primary=90, counter=0)
+        self.stop(1)
+        # move left wheel backwards
+       
+        self.left(primary=-90, counter=0)
+        self.stop(1)
+        #move righ wheel backwards
 
-    # move right wheel forward
-
-    # move left wheel backwards
-
-    #move righ wheel backwards
-    pass
+        self.right(primary=-90, counter=0)
+        self.stop(1)
     def crazy(self):
     """spins and moves servo"""
     #move servo 1000
