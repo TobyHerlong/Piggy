@@ -56,11 +56,11 @@ class Piggy(PiggyParent):
     def dance(self):
         """START DANCING"""
         #HIGHER - ORDER
-        for x in ranger(3):
-        # self.spin
-        # self.wiggle
+        """for x in ranger(3):
+        self.spin
+        self.wiggle
+        self.crazy"""
         self.shuffle
-        # self.crazy
     
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
