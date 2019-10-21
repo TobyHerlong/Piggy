@@ -56,11 +56,11 @@ class Piggy(PiggyParent):
     def dance(self):
         """START DANCING"""
         #HIGHER - ORDER
-        """for x in range(3):
-            self.shuffle
-            self.wiggle
-            self.crazy"""
-            self.spin
+        for x in range(3):
+            #self.shuffle
+            #self.wiggle
+            #self.crazy"""
+            self.spin()
             
     
     def scan(self):
@@ -78,11 +78,20 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
 
-    def spin(self):
+    def moonwalk(self):
         """spin around"""
-        turn_to_deg(360)
-        self.stop
+        self.back()
+        time.sleep(1)
+        self.turn_by_deg(-30)
+        time.sleep(1)
+        self.back()
+        time.sleep(1)
+        self.turn_by_deg(60)
+        time.sleep(1)
+        self.back()
+        self.stop()
         pass
+    
     def wiggle(self):
         """move left to right"""
         # move left wheel
@@ -90,10 +99,12 @@ class Piggy(PiggyParent):
 
         # move right wheel
         pass
+    
     def shuffle(self):
         """moves the robot left and right forward then backwards"""
         # move left wheel forward
         pass      
+    
     def crazy(self):
         """spins and moves servo"""
         #move servo 1000
