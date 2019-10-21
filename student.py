@@ -60,7 +60,7 @@ class Piggy(PiggyParent):
             #self.shuffle
             #self.wiggle
             #self.crazy"""
-            self.spin()
+            self.moonwalk()
             
     
     def scan(self):
