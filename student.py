@@ -37,6 +37,7 @@ class Piggy(PiggyParent):
                 "d": ("Dance", self.dance),
                 "o": ("Obstacle count", self.obstacle_count),
                 "c": ("Calibrate", self.calibrate),
+                "s": ("Stop", self.stop)
                 "q": ("Quit", self.quit)
                 }
         # loop and print the menu...
@@ -82,15 +83,13 @@ class Piggy(PiggyParent):
         """spin around"""
         self.back()
         time.sleep(1)
-        self.turn_by_deg(-30)
-        time.sleep(1)
         self.back()
         time.sleep(1)
-        self.turn_by_deg(60)
+        self.turn_by_deg(360)
         time.sleep(1)
         self.back()
         self.stop()
-        pass
+        
     
     def wiggle(self):
         """move left to right"""
