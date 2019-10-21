@@ -37,7 +37,7 @@ class Piggy(PiggyParent):
                 "d": ("Dance", self.dance),
                 "o": ("Obstacle count", self.obstacle_count),
                 "c": ("Calibrate", self.calibrate),
-                "s": ("Stop", self.stop)
+                "s": ("Stop", self.stop),
                 "q": ("Quit", self.quit)
                 }
         # loop and print the menu...
