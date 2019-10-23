@@ -60,9 +60,9 @@ class Piggy(PiggyParent):
         #HIGHER - ORDER
         for x in range(3):
             #self.shuffle
-            #self.wiggle
+            self.wiggle()
             #self.crazy"""
-            self.itdances()
+            #self.itdances()
             
     
     def scan(self):
@@ -113,9 +113,13 @@ class Piggy(PiggyParent):
     def wiggle(self):
         """move left to right"""
         # move left wheel
+        for x in range(10):
+            self.right()
+            time.sleep(.1)
+            self.left()
+            time.sleep(.1)
 
-
-        # move right wheel
+        
         pass
     
     def shuffle(self):
