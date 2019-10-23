@@ -89,15 +89,16 @@ class Piggy(PiggyParent):
         else:
             print("fine i'll do it")
         self.fwd()
-        time.sleep(.5)
-        self.back()
-        time.sleep(.5)
-        self.turn_by_deg(360)
-        time.sleep(.5)
-        self.left()
-        time.sleep(.5)
-        self.right()
-        self.stop()
+        for x in range():
+            time.sleep(.5)
+            self.back()
+            time.sleep(.5)
+            self.turn_by_deg(360)
+            time.sleep(.5)
+            self.left()
+            time.sleep(.5)
+            self.right()
+            self.stop()
 
     def safe_to_dance(self):
         for x in range(4):
