@@ -113,6 +113,11 @@ class Piggy(PiggyParent):
     def wiggle(self):
         """move left to right"""
         # move left wheel
+        if not self.safe_to_dance():
+            print("Nope not doin it")
+            return
+        else:
+            print("fine i'll do it")
         for x in range(10):
             self.right()
             time.sleep(.1)
