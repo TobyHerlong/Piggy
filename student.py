@@ -123,7 +123,8 @@ class Piggy(PiggyParent):
             time.sleep(.1)
             self.left()
             time.sleep(.1)
-            self.stop
+            self.stop()
+            
 
         
         pass
