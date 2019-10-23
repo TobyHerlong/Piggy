@@ -90,7 +90,7 @@ class Piggy(PiggyParent):
             print("fine i'll do it")
         self.fwd()
         time.sleep(.5)
-        self.fwd()
+        self.back()
         time.sleep(.5)
         self.turn_by_deg(360)
         time.sleep(.5)
