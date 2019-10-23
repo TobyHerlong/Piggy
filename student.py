@@ -103,7 +103,7 @@ class Piggy(PiggyParent):
         for x in range(4):
             for ang in range(1000, 2001, 100):
                 self.servo(ang)
-                self.sleep(.1)
+                time.sleep(.1)
                 if self.read_distance() < 250:
                     return False
             self.turn_by_deg(90)
