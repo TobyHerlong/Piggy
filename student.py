@@ -61,7 +61,7 @@ class Piggy(PiggyParent):
             #self.shuffle
             #self.wiggle
             #self.crazy"""
-            self.moonwalk()
+            self.itdances()
             
     
     def scan(self):
@@ -79,16 +79,34 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
 
-    def moonwalk(self):
+    def itdances(self):
         """spin around"""
+        # check to see it i safe
+        if not self.safe_to_dance():
+            print("Nope not doin it")
+            return
+        else:
+            print("fine i'll do it")
         self.back()
-        time.sleep(1)
-        self.back()
-        time.sleep(1)
+        time.sleep(.5)
+        self.fwd()
+        time.sleep(.5)
         self.turn_by_deg(360)
-        time.sleep(1)
+        time.sleep(.5)
+        self.back()
+        time.sleep(.5)
         self.back()
         self.stop()
+
+    def safe_to_dance(self):
+        for x in range(4):
+            for ang in range(1000, 2001, 100):
+                self.servo(ang)
+                self.sleep(.1)
+                if self.read_distance() < 250:
+                    return False
+            self.turn_by_deg(90)
+        return True
         
     
     def wiggle(self):
