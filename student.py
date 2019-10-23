@@ -58,11 +58,11 @@ class Piggy(PiggyParent):
     def dance(self):
         """START DANCING"""
         #HIGHER - ORDER
-        for x in range(3):
-            #self.shuffle
-            self.wiggle()
-            #self.crazy"""
-            #self.itdances()
+        for x in range():
+            #self.shuffle()
+            #self.wiggle()
+            #self.crazy()
+            self.itdances()
             
     
     def scan(self):
@@ -118,13 +118,13 @@ class Piggy(PiggyParent):
             return
         else:
             print("fine i'll do it")
-        for x in range(10):
+        for x in range(20):
             self.right()
             time.sleep(.1)
             self.left()
             time.sleep(.1)
             self.stop()
-            
+
 
         
         pass
