@@ -61,8 +61,8 @@ class Piggy(PiggyParent):
         for x in range(1):
             #self.shuffle()
             #self.wiggle()
-            #self.crazy()
-            self.itdances()
+            self.crazy()
+            #self.itdances()
             
     
     def scan(self):
@@ -128,10 +128,11 @@ class Piggy(PiggyParent):
             time.sleep(.1)
             self.left()
             time.sleep(.1)
+            self.turn_by_deg(180)
             self.stop()
 
     
-    def itdances(self):
+    def crazy(self):
         """moves the robot left and right forward then backwards"""
         if not self.safe_to_dance():
             print("Nope not doin it")
@@ -143,6 +144,10 @@ class Piggy(PiggyParent):
             time.sleep(.1)
             self.left()
             time.sleep(.1)
+            self.right()
+            time.sleep(.1)
+            self.left()
+            time.sleep(.1)
             self.fwd()
             time.sleep(.1)
             self.turn_by_deg(45)
@@ -150,7 +155,7 @@ class Piggy(PiggyParent):
 
            
     
-    def crazy(self):
+    def itdances(self):
         """spins and moves servo"""
         if not self.safe_to_dance():
             print("Nope not doin it")
