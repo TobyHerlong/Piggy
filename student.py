@@ -88,7 +88,7 @@ class Piggy(PiggyParent):
             return
         else:
             print("fine i'll do it")
-        for x in range(1):
+        for x in range(5):
             self.right()
             time.sleep(.5)
             self.left()
