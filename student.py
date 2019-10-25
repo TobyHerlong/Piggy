@@ -61,7 +61,7 @@ class Piggy(PiggyParent):
         for x in range(1):
             #self.shuffle()
             #self.wiggle()
-            #self.crazy()
+            self.crazy()
             #self.itdances()
             
     
