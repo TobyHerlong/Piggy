@@ -183,6 +183,7 @@ class Piggy(PiggyParent):
             print("fine i'll do it")
         for x in range(3):
             self.fwd()
+            time.sleep(2)
             self.stop()
 
             
