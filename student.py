@@ -89,7 +89,7 @@ class Piggy(PiggyParent):
         else:
             print("fine i'll do it")
         self.fwd()
-        for x in range():
+        for x in range(1):
             time.sleep(.5)
             self.back()
             time.sleep(.5)
