@@ -143,7 +143,7 @@ class Piggy(PiggyParent):
             return
         else:
             print("fine i'll do it")
-        for x in range(1):
+        for x in range(3):
             self.servo(1000)
             time.sleep(.1)        
             self.left()
