@@ -152,7 +152,7 @@ class Piggy(PiggyParent):
             time.sleep(.1)
             self.right()
             time.sleep(.5)
-            self.turn_by_deg(360)
+            self.turn_by_deg(180)
             time.sleep(.5)
             self.servo(1000)
             time.sleep(.1)        
@@ -161,7 +161,7 @@ class Piggy(PiggyParent):
             self.servo(1500)
             time.sleep(.1)
             self.right()
-            time.sleep(.5)
+            self.stop()
         
     ###########
     ## MAIN APP
