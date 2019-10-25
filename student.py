@@ -62,7 +62,7 @@ class Piggy(PiggyParent):
             #self.shuffle()
             #self.wiggle()
             #self.crazy()
-            self.itdances()
+            #self.itdances()
             
     
     def scan(self):
@@ -80,7 +80,7 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
 
-    def itdances(self):
+    def shuffle(self):
         """spin around"""
         # check to see it i safe
         if not self.safe_to_dance():
@@ -131,21 +131,38 @@ class Piggy(PiggyParent):
             self.stop()
 
     
-    def shuffle(self):
+    def itdances(self):
         """moves the robot left and right forward then backwards"""
         # move left wheel forward
         pass      
     
     def crazy(self):
         """spins and moves servo"""
-        #move servo 1000
-
-        #move left wheel forward 
-
-        #move left wheel backwards
-
-        #move servo 2000
-        pass
+        if not self.safe_to_dance():
+            print("Nope not doin it")
+            return
+        else:
+            print("fine i'll do it")
+        for x in range(1):
+            self.servo(1000)
+            time.sleep(.1)        
+            self.left()
+            time.sleep(.5)      
+            self.servo(1500)
+            time.sleep(.1)
+            self.right()
+            time.sleep(.5)
+            self.turn_by_deg(360)
+            time.sleep(.5)
+            self.servo(1000)
+            time.sleep(.1)        
+            self.left()
+            time.sleep(.5)      
+            self.servo(1500)
+            time.sleep(.1)
+            self.right()
+            time.sleep(.5)
+        
     ###########
     ## MAIN APP
 if __name__ == "__main__":  # only run this loop if this is the main file
