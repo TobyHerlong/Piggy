@@ -59,9 +59,9 @@ class Piggy(PiggyParent):
         """START DANCING"""
         #HIGHER - ORDER
         for x in range(1):
-            #self.shuffle()
-            #self.wiggle()
-            #self.crazy()
+            self.shuffle()
+            self.wiggle()
+            self.crazy()
             self.itdances()
             
     
@@ -165,7 +165,7 @@ class Piggy(PiggyParent):
            
     
     def itdances(self):
-        """spins and moves servo"""
+        """does a 180 than snakes and goes back"""
         for x in range(3):
             self.turn_by_deg(180)
             time.sleep(.1)
