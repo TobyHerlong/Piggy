@@ -156,12 +156,17 @@ class Piggy(PiggyParent):
             time.sleep(.5)
             self.servo(1000)
             time.sleep(.1)        
-            self.left()
+            self.right()
             time.sleep(.5)      
             self.servo(1500)
             time.sleep(.1)
             self.right()
+            time.sleep(.1)
+            self.left()
+            time.sleep(.1)
+            self.left()
             self.stop()
+            
         
     ###########
     ## MAIN APP
