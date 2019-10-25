@@ -59,10 +59,10 @@ class Piggy(PiggyParent):
         """START DANCING"""
         #HIGHER - ORDER
         for x in range(1):
-            #self.shuffle()
-            #self.wiggle()
+            self.shuffle()
+            self.wiggle()
             self.crazy()
-            #self.itdances()
+            self.itdances()
             
     
     def scan(self):
