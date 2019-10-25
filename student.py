@@ -90,15 +90,19 @@ class Piggy(PiggyParent):
             print("fine i'll do it")
         self.fwd()
         for x in range(1):
-            time.sleep(.5)
-            self.back()
-            time.sleep(.5)
-            self.turn_by_deg(360)
+            self.right()
             time.sleep(.5)
             self.left()
             time.sleep(.5)
+            self.back()
+            self.sleep(.5)
             self.right()
+            time.sleep(.5)
+            self.left()
+            time.sleep(.5)
+            self.back()
             self.stop()
+            
 
     def safe_to_dance(self):
         for x in range(4):
@@ -126,9 +130,6 @@ class Piggy(PiggyParent):
             time.sleep(.1)
             self.stop()
 
-
-        
-        pass
     
     def shuffle(self):
         """moves the robot left and right forward then backwards"""
