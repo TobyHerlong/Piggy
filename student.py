@@ -58,7 +58,7 @@ class Piggy(PiggyParent):
     def dance(self):
         """START DANCING"""
         #HIGHER - ORDER
-        for x in range():
+        for x in range(1):
             #self.shuffle()
             #self.wiggle()
             #self.crazy()
