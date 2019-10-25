@@ -182,9 +182,18 @@ class Piggy(PiggyParent):
         else:
             print("fine i'll do it")
         for x in range(3):
+            self.turn_by_deg(360)
+            time.sleep(.1)
             self.fwd()
-            time.sleep(2)
+            time.sleep(1)
+            self.right()
+            time.sleep(1)
+            self.left()
+            time.sleep(1)
+            self.back()
+            time.sleep(1)
             self.stop()
+
 
             
         
