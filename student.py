@@ -59,9 +59,9 @@ class Piggy(PiggyParent):
         """START DANCING"""
         #HIGHER - ORDER
         for x in range(1):
-            self.shuffle()
-            self.wiggle()
-            self.crazy()
+            #self.shuffle()
+            #self.wiggle()
+            #self.crazy()
             self.itdances()
             
     
@@ -81,14 +81,13 @@ class Piggy(PiggyParent):
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
 
     def shuffle(self):
-        """spin around"""
+        """does the shuffle by wiggles than goes back"""
         # check to see it i safe
         if not self.safe_to_dance():
             print("Nope not doin it")
             return
         else:
             print("fine i'll do it")
-        self.fwd()
         for x in range(1):
             self.right()
             time.sleep(.5)
@@ -116,14 +115,34 @@ class Piggy(PiggyParent):
         
     
     def wiggle(self):
-        """move left to right"""
+        """move left to right really fast"""
         # move left wheel
         if not self.safe_to_dance():
             print("Nope not doin it")
             return
         else:
             print("fine i'll do it")
-        for x in range(20):
+        for x in range(10):
+            self.right()
+            time.sleep(.1)
+            self.left()
+            time.sleep(.1)
+            self.right()
+            time.sleep(.1)
+            self.left()
+            time.sleep(.1)
+            self.right()
+            time.sleep(.1)
+            self.left()
+            time.sleep(.1)
+            self.right()
+            time.sleep(.1)
+            self.left()
+            time.sleep(.1)
+            self.right()
+            time.sleep(.1)
+            self.left()
+            time.sleep(.1)
             self.right()
             time.sleep(.1)
             self.left()
@@ -133,7 +152,7 @@ class Piggy(PiggyParent):
 
     
     def crazy(self):
-        """moves the robot left and right forward then backwards"""
+        """moves in a box but wiggles"""
         if not self.safe_to_dance():
             print("Nope not doin it")
             return
@@ -163,21 +182,7 @@ class Piggy(PiggyParent):
         else:
             print("fine i'll do it")
         for x in range(3):
-            self.servo(1000)
-            time.sleep(.1)        
-            self.left()
-            time.sleep(.5)      
-            self.servo(1500)
-            time.sleep(.1)
-            self.right()
-            time.sleep(.5)
-            self.turn_by_deg(180)
-            time.sleep(.1)
             self.fwd()
-            time.sleep(.3)
-            self.right()
-            time.sleep(.3)
-            self.left()
             self.stop()
 
             
