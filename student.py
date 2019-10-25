@@ -117,11 +117,6 @@ class Piggy(PiggyParent):
     def wiggle(self):
         """move left to right really fast"""
         # move left wheel
-        if not self.safe_to_dance():
-            print("Nope not doin it")
-            return
-        else:
-            print("fine i'll do it")
         for x in range(10):
             self.right()
             time.sleep(.1)
@@ -153,11 +148,6 @@ class Piggy(PiggyParent):
     
     def crazy(self):
         """moves in a box but wiggles"""
-        if not self.safe_to_dance():
-            print("Nope not doin it")
-            return
-        else:
-            print("fine i'll do it")
         for x in range(20):
             self.right()
             time.sleep(.1)
@@ -176,13 +166,8 @@ class Piggy(PiggyParent):
     
     def itdances(self):
         """spins and moves servo"""
-        if not self.safe_to_dance():
-            print("Nope not doin it")
-            return
-        else:
-            print("fine i'll do it")
         for x in range(3):
-            self.turn_by_deg(360)
+            self.turn_by_deg(180)
             time.sleep(.1)
             self.fwd()
             time.sleep(1)
