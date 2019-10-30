@@ -76,6 +76,7 @@ class Piggy(PiggyParent):
         found_something = False # trigger
         trigger_distance = 250
         count = 0
+        time.sleep(.01)
         starting_position = self.get_heading()
         self.right(primary=60, counter=-60)
         while self.get_heading() != starting_position:
