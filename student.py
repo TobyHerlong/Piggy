@@ -77,7 +77,7 @@ class Piggy(PiggyParent):
         trigger_distance = 250
         count = 0
         starting_position = self.get_heading()
-        self.right(primary=60, counter=-60)
+        self.right(primary=40, counter=-40)
         while self.get_heading() !=starting_postion:
             if self.read_distance() < trigger_distance and not found_something:
                 found_something = True
@@ -86,7 +86,7 @@ class Piggy(PiggyParent):
             elif self.read_distance() > trigger_distance and found_something:
                 found_something = False
                 print("I have a clear view")
-        self.stop
+        self.stop()
         print("i found this many things: %d" % count)
         return count
 
