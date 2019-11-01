@@ -100,16 +100,20 @@ class Piggy(PiggyParent):
             while self.read_distance() > 100:
                 self.fwd()
                 time.sleep(.01)
-            self.lilshuffle()
-            self.turn_by_deg(46)
+            self.checkways()
+            # self.turn_by_deg(46)
 
-    def lilshuffle():
-        self.right()
-        time.sleep(.5)
-        self.left()
-        time.sleep(.5)
-        self.back()
-        self.stop()
+    def checkways():
+        self.servo(1000)
+        time.sleep(.3)
+        r = self.read_distance()
+        self.servo(2000)
+        time.sleep(.3)
+        l = self.read_distance()
+        if l > r:
+            self.turn_by_deg(-90)
+        if l < r:
+            self.turn_by_deg(90)
 
 
     def shuffle(self):
