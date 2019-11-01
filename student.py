@@ -100,7 +100,17 @@ class Piggy(PiggyParent):
             while self.read_distance() > 100:
                 self.fwd()
                 time.sleep(.01)
+            self.lilshuffle()
             self.turn_by_deg(46)
+
+    def lilshuffle():
+        self.right()
+        time.sleep(.5)
+        self.left()
+        time.sleep(.5)
+        self.back()
+        self.stop()
+
 
     def shuffle(self):
         """does the shuffle by wiggles than goes back"""
