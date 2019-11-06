@@ -91,7 +91,7 @@ class Piggy(PiggyParent):
         print("i found this many things: %d" % count)
         return count
 
-     def nav(self):
+    def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
