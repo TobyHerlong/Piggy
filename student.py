@@ -101,7 +101,26 @@ class Piggy(PiggyParent):
                 self.fwd()
                 time.sleep(.01)
             self.stop()
-            self.checkways()
+            self.scan()
+            # traversal
+            left total = 0
+            left count = 0
+            right total = 0
+            left cpunt = 0
+            for ang, dist in enumerate(self.scan_data):
+                if ang < self.MIDPOINT:
+                    right_total += dist
+                    left_count += 1
+                else:
+                    left_total += dist
+                    right_count += 1
+            left_avg = left_total / left_count
+            right_avg = right_total / right_count
+            if left_avg > right_avg:
+                self.turn_by_deg(-45)
+            else:
+                self.turn_by_deg(45)
+
             # self.turn_by_deg(46)
 
     def checkways():
