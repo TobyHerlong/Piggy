@@ -104,9 +104,9 @@ class Piggy(PiggyParent):
             self.scan()
             # traversal
             left_total = 0
-            left count = 0
+            left_count = 0
             right_total = 0
-            left count = 0
+            left_count = 0
             for ang, dist in enumerate(self.scan_data):
                 if ang < self.MIDPOINT:
                     right_total += dist
