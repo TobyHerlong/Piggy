@@ -105,7 +105,7 @@ class Piggy(PiggyParent):
             self.stop()
             self.scan()
             # turns out of cornoer if stuck
-            corner_count += 1
+            corner_count += 0
             if corner_count > 4
                 self.turn_by_deg(110)            
             #traversal
