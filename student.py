@@ -99,7 +99,7 @@ class Piggy(PiggyParent):
         corner_count = 0
         while True:    
             self.servo(self.MIDPOINT)
-            while self.read_distance() > 125:
+            while self.read_distance() > 175:
                 corner_count = 0
                 self.fwd()
                 time.sleep(.01)
