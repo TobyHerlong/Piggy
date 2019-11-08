@@ -74,7 +74,7 @@ class Piggy(PiggyParent):
     def obstacle_count(self):
         """Does a 360 scan and returns the  number of obstacles it see"""
         found_something = False # trigger
-        trigger_distance = 250
+        trigger_distance = 125
         count = 0
         starting_position = self.get_heading()
         time.sleep(1)
