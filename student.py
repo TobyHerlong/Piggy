@@ -96,10 +96,12 @@ class Piggy(PiggyParent):
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
+        
         corner_count = 0
+        
         while True:    
             self.servo(self.MIDPOINT)
-            while self.read_distance() > 175:
+            while self.read_distance() > 255:
                 corner_count = 0
                 self.fwd()
                 time.sleep(.01)
@@ -124,9 +126,9 @@ class Piggy(PiggyParent):
             left_avg = left_total / left_count
             right_avg = right_total / right_count
             if left_avg > right_avg:
-                self.turn_by_deg(-60)
+                self.turn_by_deg(-55)
             else:
-                self.turn_by_deg(60)
+                self.turn_by_deg(55)
 
 
             # self.turn_by_deg(46)
