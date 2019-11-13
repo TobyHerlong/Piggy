@@ -98,7 +98,6 @@ class Piggy(PiggyParent):
             self.servo(ang)
             if self.read_distance() < self.SAFE_DIST:
                 return False
-
     return True
 
     def nav(self):
