@@ -78,7 +78,7 @@ class Piggy(PiggyParent):
         count = 0
         starting_position = self.get_heading()
         time.sleep(1)
-        self.right(primary=60, counter=-60)
+        self.right(primary=70, counter=-70)
         while self.get_heading() != starting_position:
             if self.read_distance() < trigger_distance and not found_something:
                 found_something = True
