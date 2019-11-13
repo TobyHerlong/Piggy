@@ -112,7 +112,7 @@ class Piggy(PiggyParent):
         
         while True:    
             self.servo(self.MIDPOINT)
-            while self.quick_check() > 350:
+            while self.quick_check():
                 corner_count = 0
                 self.fwd()
                 time.sleep(.01)
