@@ -16,8 +16,8 @@ class Piggy(PiggyParent):
         ''' 
         MAGIC NUMBERS <-- where we hard-code our settings
         '''
-        self.LEFT_DEFAULT = 80
-        self.RIGHT_DEFAULT = 80
+        self.LEFT_DEFAULT = 99
+        self.RIGHT_DEFAULT = 99
         self.SAFE_DIST = 350
         self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
         self.load_defaults()
@@ -121,7 +121,7 @@ class Piggy(PiggyParent):
             # turns out of cornoer if stuck
             corner_count += 1
             if corner_count > 3:
-                self.turn_by_deg(180)            
+                self.turn_by_deg(140)            
             #traversal
             left_total = 0
             left_count = 0
@@ -137,9 +137,9 @@ class Piggy(PiggyParent):
             left_avg = left_total / left_count
             right_avg = right_total / right_count
             if left_avg > right_avg:
-                self.turn_by_deg(-60)
+                self.turn_by_deg(-45)
             else:
-                self.turn_by_deg(60)
+                self.turn_by_deg(45)
 
 
             # self.turn_by_deg(46)
