@@ -19,7 +19,7 @@ class Piggy(PiggyParent):
         self.LEFT_DEFAULT = 99
         self.RIGHT_DEFAULT = 99
         self.SAFE_DIST = 300
-        self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
+        self.MIDPOINT = 1400  # what servo command (1000-2000) is straight forward for your bot?
         self.load_defaults()
         
 
@@ -94,7 +94,7 @@ class Piggy(PiggyParent):
 
     def quick_check(self):
         #Three quick checks
-        for ang in range(self.MIDPOINT-250, self.MIDPOINT+251, 150):
+        for ang in range(self.MIDPOINT-250, self.MIDPOINT+251, 250):
             self.servo(ang)
             if self.read_distance() < self.SAFE_DIST:
                 return False
