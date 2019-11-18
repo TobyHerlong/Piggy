@@ -18,6 +18,7 @@ class Piggy(PiggyParent):
         '''
         self.LEFT_DEFAULT = 99
         self.RIGHT_DEFAULT = 99
+        self.EXIT_HEADING = 0
         self.SAFE_DIST = 300
         self.MIDPOINT = 1400  # what servo command (1000-2000) is straight forward for your bot?
         self.load_defaults()
@@ -103,6 +104,8 @@ class Piggy(PiggyParent):
         return True
 
     def nav(self):
+
+            self.EXIT_HEADING = self.get_heading()
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
@@ -121,7 +124,7 @@ class Piggy(PiggyParent):
             # turns out of cornoer if stuck
             corner_count += 1
             if corner_count > 3:
-                self.turn_by_deg(140)            
+                self.turntoexit
             #traversal
             left_total = 0
             left_count = 0
@@ -144,6 +147,11 @@ class Piggy(PiggyParent):
 
             # self.turn_by_deg(46)
 
+    def turntoexit():
+        self.turn_by_deg(180)
+        self.deg_fwd(720)
+        self.turn_by_deg(self.EXIT_HEADING)
+    
     def checkways():
         #smart attempt
         self.servo(1000)
