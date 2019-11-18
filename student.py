@@ -148,6 +148,7 @@ class Piggy(PiggyParent):
             # self.turn_by_deg(46)
 
     def turntoexit():
+        #turns to favor the exit side
         self.turn_by_deg(180)
         self.deg_fwd(720)
         self.turn_by_deg(self.EXIT_HEADING)
