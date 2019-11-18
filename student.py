@@ -105,13 +105,13 @@ class Piggy(PiggyParent):
 
     def nav(self):
 
-            self.EXIT_HEADING = self.get_heading()
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
         
         corner_count = 0
+        self.EXIT_HEADING = self.get_heading()
         
         while True:    
             self.servo(self.MIDPOINT)
