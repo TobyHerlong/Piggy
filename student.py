@@ -153,7 +153,7 @@ class Piggy(PiggyParent):
         self.deg_fwd(720)
         self.turn_by_deg(self.EXIT_HEADING)
     
-    def checkways():
+    def checkways(self):
         #smart attempt
         self.servo(1000)
         time.sleep(.3)
