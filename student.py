@@ -150,8 +150,8 @@ class Piggy(PiggyParent):
     def turntoexit(self):
         #turns to favor the exit side
         self.turn_by_deg(180)
-        self.deg_fwd(-720)
-        self.turn_by_deg(self.EXIT_HEADING)
+        self.deg_fwd(720)
+        self.turn_to_deg(self.EXIT_HEADING)
     
     def checkways(self):
         #smart attempt
