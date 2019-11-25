@@ -152,7 +152,23 @@ class Piggy(PiggyParent):
         self.turn_by_deg(180)
         self.deg_fwd(720)
         self.turn_to_deg(self.EXIT_HEADING)
-    
+
+    def turntoexittwo(self):
+        # trying to make it turn to exit 
+        for ang, dist in self.scan_data.items():
+                if ang < self.MIDPOINT: 
+                    right_total += dist
+                    right_count += 1
+                else:
+                    left_total += dist
+                    left_count += 1
+            left_avg = left_total / left_count
+            right_avg = right_total / right_count
+            if left_avg > right_avg:
+                self.turn_by_deg(-35)
+            else:
+                self.turn_by_deg(35)
+
     def checkways(self):
         #smart attempt
         self.servo(1000)
