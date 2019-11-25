@@ -153,7 +153,7 @@ class Piggy(PiggyParent):
         self.deg_fwd(720)
         self.turn_to_deg(self.EXIT_HEADING)
 
-    def turntoexittwo(self):
+    #def turntoexittwo(self):
         # trying to make it turn to exit 
         for ang, dist in self.scan_data.items():
                 if ang < self.MIDPOINT: 
