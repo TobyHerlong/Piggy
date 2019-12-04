@@ -52,11 +52,11 @@ def menu(self):
         menu.get(ans, [None, self.quit])[1]()
 
 
-    '''
+    """
     ****************
     STUDENT PROJECTS
     ****************
-    '''
+    """
 
     def dance(self):
         """START DANCING"""
