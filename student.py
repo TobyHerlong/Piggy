@@ -29,27 +29,27 @@ class Piggy(PiggyParent):
         self.set_motor_limits(self.MOTOR_LEFT, self.LEFT_DEFAULT)
         self.set_motor_limits(self.MOTOR_RIGHT, self.RIGHT_DEFAULT)
         self.set_servo(self.SERVO_1, self.MIDPOINT)
-        
+            
 
-def menu(self):
-        """Displays menu dictionary, takes key-input and calls method"""
-        ## This is a DICTIONARY, it's a list with custom index values. Python is cool.
-        # Please feel free to change the menu and add options.
-        print("\n *** MENU ***") 
-        menu = {"n": ("Navigate", self.nav),
-                "d": ("Dance", self.dance),
-                "o": ("Obstacle count", self.obstacle_count),
-                "h": ("Hold position", self.hold_steady),
-                "c": ("Calibrate", self.calibrate),
-                "q": ("Quit", self.quit)
-                }
-        # loop and print the menu...
-        for key in sorted(menu.keys()):
-            print(key + ":" + menu[key][0])
-        # store the user's answer
-        ans = str.lower(input("Your selection: "))
-        # activate the item selected
-        menu.get(ans, [None, self.quit])[1]()
+    def menu(self):
+            """Displays menu dictionary, takes key-input and calls method"""
+            ## This is a DICTIONARY, it's a list with custom index values. Python is cool.
+            # Please feel free to change the menu and add options.
+            print("\n *** MENU ***") 
+            menu = {"n": ("Navigate", self.nav),
+                    "d": ("Dance", self.dance),
+                    "o": ("Obstacle count", self.obstacle_count),
+                    "h": ("Hold position", self.hold_steady),
+                    "c": ("Calibrate", self.calibrate),
+                    "q": ("Quit", self.quit)
+                    }
+            # loop and print the menu...
+            for key in sorted(menu.keys()):
+                print(key + ":" + menu[key][0])
+            # store the user's answer
+            ans = str.lower(input("Your selection: "))
+            # activate the item selected
+            menu.get(ans, [None, self.quit])[1]()
 
 
     """
