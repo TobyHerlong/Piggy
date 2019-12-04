@@ -51,6 +51,7 @@ def menu(self):
         # activate the item selected
         menu.get(ans, [None, self.quit])[1]()
 
+
     '''
     ****************
     STUDENT PROJECTS
