@@ -31,7 +31,7 @@ class Piggy(PiggyParent):
         self.set_servo(self.SERVO_1, self.MIDPOINT)
         
 
-    def menu(self):
+def menu(self):
         """Displays menu dictionary, takes key-input and calls method"""
         ## This is a DICTIONARY, it's a list with custom index values. Python is cool.
         # Please feel free to change the menu and add options.
@@ -39,8 +39,8 @@ class Piggy(PiggyParent):
         menu = {"n": ("Navigate", self.nav),
                 "d": ("Dance", self.dance),
                 "o": ("Obstacle count", self.obstacle_count),
+                "h": ("Hold position", self.hold_position),
                 "c": ("Calibrate", self.calibrate),
-                "s": ("Stop", self.stop),
                 "q": ("Quit", self.quit)
                 }
         # loop and print the menu...
@@ -153,6 +153,15 @@ class Piggy(PiggyParent):
         self.deg_fwd(720)
         self.turn_to_deg(self.EXIT_HEADING)
 
+    def hold_steady(self):
+        self.EXIT_HEADING = self.get_heading()
+        while True:
+            time.sleep(.05)
+            current_ang = self.EXIT_HEADING()
+            if current_ang != self.EXIT_HEADING:
+                self turn_to_deg(self.EXIT_HEADING)
+
+
     
     def checkways(self):
         #smart attempt
@@ -183,7 +192,7 @@ class Piggy(PiggyParent):
             time.sleep(.5)
             self.back()
             time.sleep(.5)
-            self.right()
+            selfright()
             time.sleep(.5)
             self.left()
             time.sleep(.5)
