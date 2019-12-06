@@ -155,10 +155,10 @@ class Piggy(PiggyParent):
         self.turn_to_deg(self.EXIT_HEADING)
 
     def hold_steady(self):
-        EXIT_HEADING = self.get_heading()
+        EXIT_HEADING = self.current_ang()
         while True:
             time.sleep(.05)
-            current_ang = EXIT_HEADING()
+            current_ang = EXIT_HEADING
             if abs(current_ang - EXIT_HEADING) > 20:
                 self.turn_to_deg(EXIT_HEADING)
 
