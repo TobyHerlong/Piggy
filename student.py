@@ -159,7 +159,7 @@ class Piggy(PiggyParent):
         while True:
             time.sleep(.05)
             current_ang = self.EXIT_HEADING()
-            if abs(current_ang - self.EXIT_HEADING) >20:
+            if abs(current_ang - self.EXIT_HEADING) > 20:
                 self turn_to_deg(self.EXIT_HEADING)
 
 
