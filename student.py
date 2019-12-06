@@ -154,13 +154,13 @@ class Piggy(PiggyParent):
         self.deg_fwd(720)
         self.turn_to_deg(self.EXIT_HEADING)
 
-    def hold_steady(self):
-        EXIT_HEADING = self.current_ang()
+    def hold_position(self):
+        started_at = self.get_heading()
         while True:
-            time.sleep(.05)
-            current_ang = self.get_heading()
-            if abs(current_ang - EXIT_HEADING) > 20:
-                self.turn_to_deg(current_ang)
+            time.sleep(.1)
+            current_angle = self.get_heading()
+            if abs(started_at - current_angle) > 20:
+                self.turn_to_deg(started_at)
 
 
     
