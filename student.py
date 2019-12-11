@@ -114,6 +114,7 @@ class Piggy(PiggyParent):
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
         
         corner_count = 0
+        start_time = 0
         self.EXIT_HEADING = self.get_heading()
         
         while True:    
