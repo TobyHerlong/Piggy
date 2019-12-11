@@ -127,16 +127,16 @@ class Piggy(PiggyParent):
             if corner_count == 3:
                 self.turntoexit()
             #traversal
-            left_total = 0
-            left_count = 0
-            right_total = 0
-            right_count = 0
             self.Which_way_to_turn()
 
             # self.turn_by_deg(46)
 
     
     def Which_way_to_turn(self):
+        left_total = 0
+        left_count = 0
+        right_total = 0
+        right_count = 0
         for ang, dist in self.scan_data.items():
             if ang < self.MIDPOINT: 
                 right_total += dist
