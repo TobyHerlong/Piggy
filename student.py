@@ -139,7 +139,7 @@ class Piggy(PiggyParent):
     def time_in_maze(self):
         Print(f"I Naced for {datetime.now() - self.start_time}")
         if datetime.now() - self.start_time() > 60
-            turn_to_deg(self.turntoexit)
+            self.turn_to_deg(self.turntoexit)
     
     def Which_way_to_turn(self):
         left_total = 0
