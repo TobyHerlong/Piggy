@@ -1,6 +1,7 @@
 from teacher import PiggyParent
 import sys
 import time
+from datetime import time
 
 class Piggy(PiggyParent):
 
@@ -19,6 +20,7 @@ class Piggy(PiggyParent):
         self.LEFT_DEFAULT = 90
         self.RIGHT_DEFAULT = 90
         self.EXIT_HEADING = 0
+        self.start_time = 0
         self.SAFE_DIST = 300
         self.MIDPOINT = 1400  # what servo command (1000-2000) is straight forward for your bot?
         self.load_defaults()
@@ -128,9 +130,15 @@ class Piggy(PiggyParent):
                 self.turntoexit()
             #traversal
             self.Which_way_to_turn()
+            self.time_in_maze
 
             # self.turn_by_deg(46)
 
+    
+    def time_in_maze(self):
+        Print(f"I Naced for {datetime.now() - self.start_time}")
+        if datetime.now() - self.start_time() > 60
+            turn_to_deg(self.turntoexit)
     
     def Which_way_to_turn(self):
         left_total = 0
