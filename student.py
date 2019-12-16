@@ -43,6 +43,7 @@ class Piggy(PiggyParent):
                     "o": ("Obstacle count", self.obstacle_count),
                     "h": ("Hold position", self.hold_steady),
                     "c": ("Calibrate", self.calibrate),
+                    "v": ("slither!", self.slither)
                     "q": ("Quit", self.quit)
                     }
             # loop and print the menu...
@@ -106,6 +107,50 @@ class Piggy(PiggyParent):
         
         return True
 
+    def slither(self):
+        pass
+        # wirte down where we are starting
+        start_direction = self.get_heading()
+        # start driving foward
+        self.set_motor_power(self.MOTOR_LEFT, self.LEFT_DEFAULT)
+        self.set_motor_power(self.MOTOR_RIGHT, self.RIGHT DEFAULT)
+        self.fwd()
+        # slow down the left
+        for power in range(self.LEFT_DEFAULT, 30, -10):
+            self.set_motor_power(self.MOTOR_LEFT, power)
+            time.sleep(.5)
+
+        # throttle up left while lowering right
+        for power in range(self.LEFT_DEFAULT + 1, 10):
+            self.set_motor_power(self.MOTOR_LEFT, power)
+            time.sleep(.1)
+
+        # slow down the right
+        for power in range(self.RIGHT_DEFAULT, 30, -10):
+            self.set_motor_power(self.MOTOR_RIGHT, power)
+            time.sleep(.5)
+
+        # throttle up right while lowering left
+        for power in range(self.LEFT_DEFAULT + 1, 10):
+            self.set_motor_power(self.MOTOR_RIGHT, power)
+            time.sleep(.1)
+
+        left_speed = self.LEFT_DEFAULT
+        right_speed = self.RIGHT_DEFAULT
+
+        #Straighten out
+        while self.get_heading() != starting direction:
+            # if I need to veer right
+            if self.get_heading() < starting direction:
+                right_speed -= 10
+
+            # if i need to veer left
+            elif self.get_heading() > start_direction:
+                left_speed -= 10
+            self.set_motor_power(self.MOTOR_LEFT, self.LEFT_DEFAULT)
+            self.set_motor_power(self.MOTOR_RIGHT, self.RIGHT DEFAULT)
+            time.sleep(.1)
+
     def nav(self):
 
         print("-----------! NAVIGATION ACTIVATED !------------\n")
@@ -137,7 +182,7 @@ class Piggy(PiggyParent):
 
     
     def time_in_maze(self):
-        Print(f"I Naced for {datetime.now() - self.start_time}")
+        Print(f"I Naved for {datetime.now() - self.start_time}")
         if datetime.now() - self.start_time() > 60
             self.turn_to_deg(self.turntoexit)
     
