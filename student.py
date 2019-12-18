@@ -134,19 +134,19 @@ class Piggy(PiggyParent):
             self.set_motor_power(self.MOTOR_RIGHT, power)
             time.sleep(.1)
 
-        left_speed = self.LEFT_DEFAULT
-        right_speed = self.RIGHT_DEFAULT
-        
         # straigten out
         while self.get_heading() != starting_direction:
             # if I need to veer right
             if self.get_heading() < starting_direction:
-                right_speed -= 5
+                print("IM too far left")
+                self.set_motor_power(self.MOTOR_LEFT, 90)
+                self.set_motor_power(self.MOTOR_RIGHT, 70)
             # if I need to veer left
             elif self.get_heading() > starting_direction:
-                left_speed -= 5
-            self.set_motor_power(self.MOTOR_LEFT, left_speed)
-            self.set_motor_power(self.MOTOR_RIGHT, right_speed) 
+                print("im too far right")
+                self.set_motor_power(self.MOTOR_LEFT, 70)
+                self.set_motor_power(self.MOTOR_RIGHT, 90) 
+            
             time.sleep(.1)
 
 
