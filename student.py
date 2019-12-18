@@ -134,7 +134,7 @@ class Piggy(PiggyParent):
         for power in range(50, self.RIGHT_DEFAULT + 1, 10):
             self.set_motor_power(self.MOTOR_RIGHT, power)
             time.sleep(.1)
-    ​
+
         left_speed = self.LEFT_DEFAULT
         right_speed = self.RIGHT_DEFAULT
         
